@@ -57,3 +57,8 @@ jobs:
           curl localhost:9000
           ls 
           sudo docker images
+    - name: Show GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+        
